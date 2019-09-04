@@ -1,0 +1,112 @@
+/* custom vertical tabs for vscode */
+/*
+    tested in VSCode Version 1.37.1
+
+    feel free to use this piece of CSS
+    You need "Custom CSS and JS Loader" Extension installed.
+
+    You need to add following settings to your vscode settings:
+
+    {
+      "vscode_custom_css.imports": [
+        "file:///your//path//vscode.css"
+      ],
+      "vscode_custom_css.policy": true,
+      "workbench.editor.showTabs": true
+    }
+
+    You need to reload VSCode after installation and configuration.
+
+    Feel free to contact me on github: @cmmdmx
+
+    Please reference me when sharing.
+*/
+
+.tab.close-button-right.sizing-fit.has-icon-theme.dirty {
+  width: 100%;
+}
+
+.tabs-and-actions-container {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1;
+}
+
+.tab.close-button-right.sizing-fit.has-icon-theme {
+  width: 100% !important;
+  min-width: 100% !important;
+  align-self: stretch;
+}
+
+.tabs-and-actions-container > .monaco-scrollable-element {
+  min-height: 100% !important;
+  height: unset !important;
+  max-height: unset !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.split-view-view.visible {
+  transform: translate(0,0);
+}
+
+.editor-actions {
+  order: -1;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.editor-actions li {
+  pointer-events: all;
+}
+
+.tabs-container { 
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  flex: 1;
+}
+
+.editor-group-container {
+  flex-direction: row !important;
+  display: flex !important;
+}
+
+.title.tabs.show-file-icons {
+  min-width: 12em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container {
+  flex: 4;
+  margin-top: auto;
+}
+
+.tabs-breadcrumbs {
+  border-top: 1px solid #cccccc;
+}
+
+.breadcrumbs-control.backslash-path {
+  height: unset !important;
+}
+
+
+.breadcrumbs-control.backslash-path .monaco-breadcrumbs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: unset !important;
+  height: unset !important;
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-breadcrumbs .breadcrumbs-control .monaco-breadcrumb-item {
+  align-self: flex-start;
+}
