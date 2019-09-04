@@ -22,8 +22,17 @@
     Please reference me when sharing.
 */
 
-.tab.close-button-right.sizing-fit.has-icon-theme.dirty {
-  width: 100%;
+/* editor layout */
+
+
+.split-view-view.visible {
+  transform: translate(0,0);
+}
+
+/* tabs */
+
+.monaco-breadcrumb-item {
+  width: 100% !important;
 }
 
 .tabs-and-actions-container {
@@ -32,22 +41,8 @@
   flex: 1;
 }
 
-.tab.close-button-right.sizing-fit.has-icon-theme {
-  width: 100% !important;
-  min-width: 100% !important;
-  align-self: stretch;
-}
-
-.tabs-and-actions-container > .monaco-scrollable-element {
-  min-height: 100% !important;
-  height: unset !important;
-  max-height: unset !important;
-  display: flex;
-  flex-direction: column;
-}
-
-.split-view-view.visible {
-  transform: translate(0,0);
+.tab.close-button-right.sizing-fit.has-icon-theme.dirty {
+  width: 100%;
 }
 
 .editor-actions {
@@ -73,21 +68,47 @@
   flex: 1;
 }
 
-.editor-group-container {
-  flex-direction: row !important;
-  display: flex !important;
+.tab.close-button-right.sizing-fit.has-icon-theme {
+  width: 100% !important;
+  min-width: 100% !important;
+  align-self: stretch;
 }
 
-.title.tabs.show-file-icons {
-  min-width: 12em;
-  flex: 1;
+.tabs-and-actions-container > .monaco-scrollable-element {
+  min-height: 100% !important;
+  height: unset !important;
+  max-height: unset !important;
   display: flex;
   flex-direction: column;
 }
 
-.editor-container {
-  flex: 4;
-  margin-top: auto;
+.title.tabs.show-file-icons {
+  min-width: 3em;
+  max-width: 3em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 1;
+  cursor:default !important;
+}
+
+
+.title.tabs.show-file-icons .label-name {
+  visibility: hidden;
+}
+
+.title.tabs.show-file-icons:hover {
+  min-width: 12em;
+  max-width: 16em;
+  overflow: auto;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.title.tabs.show-file-icons:hover .label-name {
+  visibility: visible;
 }
 
 .tabs-breadcrumbs {
@@ -109,4 +130,46 @@
 
 .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-breadcrumbs .breadcrumbs-control .monaco-breadcrumb-item {
   align-self: flex-start;
+}
+
+/* editor */
+
+.minimap.slider-mouseover {
+  left: unset !important;
+  right: 0;
+  opacity: 0.3;
+}
+
+.minimap.slider-mouseover:hover {
+  opacity: 1;
+}
+
+.editor-instance {
+  position: absolute;
+  left: 0;
+}
+
+.monaco-editor.no-user-select {
+  box-sizing: border-box;
+  padding-left: 3em;
+}
+
+.monaco-editor .overflow-guard {
+  width: 100% !important;
+}
+
+.lines-content.monaco-editor-background {
+  position: relative !important;
+  width: 100% !important;
+}
+
+.editor-group-container {
+  flex-direction: row !important;
+  display: flex !important;
+  background-color: rgb(37, 37, 38);
+}
+
+.editor-container {
+  flex: 4;
+  margin-top: auto;
 }
