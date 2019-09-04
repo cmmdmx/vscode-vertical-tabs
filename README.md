@@ -1,7 +1,7 @@
 # vscode-vertical-tabs
 Vertical Tabs for VSCode - Latest Version of Visual Studio Code
 
-![Image of Vertical Tabs](vscode.jpg)
+![Image of Vertical Tabs](vscode-vertical-tabs.jpg)
 
 ## why
 
